@@ -1,1 +1,24 @@
+body {
+    margin: 0;
+    font-family: "Noto Serif TC";
+    font-weight: 550;
+}
+#div1{
+    float: left;
+    position: fixed;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 2%;
+    width: 34%;
+    height: 80%;
 
+    background-color: green;
+}
+#div2{
+    float: right;
+    margin-top: 1%;
+    margin-right: 3%;
+    height: 5000px;
+    width: 55%;
+    background-color: red;
+}
