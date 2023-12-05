@@ -6,7 +6,7 @@ body {
 #div1{
     float: left;
     position: fixed;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 3%;
     margin-right: 2%;
     width: 34%;
@@ -16,7 +16,7 @@ body {
 }
 #div2{
     float: right;
-    margin-top: 12%;
+    margin-top: 6%;
     margin-right: 3%;
     height: 5000px;
     width: 55%;
