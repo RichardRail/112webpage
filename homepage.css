@@ -1,6 +1,5 @@
 @font-face {
     font-family: 'SourceHanSerifTC';
-    src: local("SourceHanSerifTC"),
-          url('./fonts/SourceHanSerifTC-Bold.woff') format("woff"),
+    src:  url('./fonts/SourceHanSerifTC-Bold.woff') format("woff"),
           url('./fonts/SourceHanSerifTC-Heavy.woff') format("woff"),
   }
