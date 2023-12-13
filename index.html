@@ -2,20 +2,67 @@
 <html>
     <head>
         <link href='https://fonts.googleapis.com/css?family=Noto Serif TC' rel='stylesheet'>
+        <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" type="text/css" href="./homepage.css">
         <meta charset="UTF-8">
         <title>首頁</title>
+        <script src="https://unpkg.com/scrollreveal"></script>
     </head>
-    <body style="margin: 0;">
-        <div style="background-color: black; width: 100%; top: 0%; left: 0; right: 0; position: fixed;">
-            <h1 style="color: white; margin: 0;">&nbsp;&nbsp;§首頁</h1>
+    <body>
+        <div style="background-color: #031120; width: 100%; top: 0%; left: 0; right: 0; position: fixed;">
+            <p style="color: white; margin: 0; font-size: 32px;">&nbsp;&nbsp;§首頁</h1>
         </div>
         <!--p style="font-size: 100px;">This is test.<br>這是測試。</p-->
         <div id="div1">
-            <p style="color: white; font-size: 50px;">test1測試1</p>
+            <p class="an">test1測試1</p>
         </div>
         <div id="div2">
-            <p style="color: white; font-size: 50px;">test2測試2</p>
+            <p id="p1">&nbsp;&nbsp;&nbsp;&nbsp;Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed magna neque. Nunc eget mi tincidunt felis pharetra tincidunt. Quisque et consectetur neque. Nullam eu consectetur ipsum. Vivamus vel diam at odio ultrices tristique. Etiam tempus egestas ex, quis euismod eros mollis in. Vivamus placerat sodales felis, vitae viverra mauris. Nam vulputate commodo augue, in bibendum nulla elementum id. Nulla facilisi. Nulla eu erat condimentum, blandit elit sed, mollis sapien. Phasellus viverra cursus vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In pellentesque arcu vel purus tempus gravida. Sed finibus laoreet est vulputate fermentum. Nunc hendrerit aliquet sapien.</p>
+            <button onclick="bubble_sort()">Click</button>
+            <p id="jstest">這是一個段落喔</p>
+            <div id="div3">
+                <div class="ball">
+                   <center>3</center>
+                </div>
+                <div class="ball">
+                    <center>8</center>
+                </div>
+                <div class="ball">
+                    <center>7</center>
+                </div>
+                <div class="ball">
+                    <center>4</center>
+                </div>
+                <div class="ball">
+                    <center>1</center>
+                </div>
+            </div>
         </div>
     </body>
+    <script src="./wowjs/js/wow.min.js"></script>
+
+    <script>
+    new WOW().init();
+    bubble_sort = function() {
+        var arr = [3,8,7,4,1];
+    	var i, j, temp;
+        console.log(arr);
+	    for (i = 0; i < arr.length - 1; i++)
+		    for (j = 0; j < arr.length - 1 - i; j++)
+			    if (arr[j] > arr[j + 1]) {
+				    temp = arr[j];
+				    arr[j] = arr[j + 1];
+				    arr[j + 1] = temp;
+                    console.log(temp);
+                    console.log(arr);
+			    }
+                document.getElementById("jstest").innerHTML += arr + ",  ";
+
+        i = 0;
+        for (i = 0; i < arr.length; i++)
+            console.log(i);
+            //console.log(arr[i]);
+	        //document.getElementById("jstest").innerHTML += arr[i] + " ";
+    };
+    </script>
 </html>
