@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Noto Serif TC' rel='stylesheet'>
+        <!--link rel="stylesheet" href="css/animate.css"-->
+        <!--link rel="stylesheet" type="text/css" href="./homepageplus.css"-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <title>首頁</title>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <style>
+            @keyframes fadein {
+                0% {
+                    opacity:0;
+                }
+                25%{
+                    opacity: 0;
+                }
+                100% {
+                    opacity:1;
+                }
+            }
+            @keyframes fadein2 {
+                0% {
+                    opacity:0;
+                }
+                40%{
+                    opacity:0;
+                }
+                100% {
+                    opacity:1;
+                }
+            }
+            @keyframes fadein3 {
+                0% {
+                    opacity:0;
+                }
+                100% {
+                    opacity:1;
+                }
+            }
+            body {
+                animation: fadein3 1s;
+                margin: 0;
+                font-family: "Noto Serif TC";
+                font-weight: 50;
+                background-color: #dcdcdc;
+                /*background-image: url("https://cdn.discordapp.com/attachments/1109430839445553163/1188767698289700874/IMG_2633.gif?ex=659bb931&is=65894431&hm=8b22164e3732696bca0c90b9cd000b90880d976b013ed2eb0955bac76651ecef&");*/
+                
+            }
+            #jstest{
+
+                margin-right: 2%; 
+                margin-left: 2%; 
+                font-size: 35px;
+            }
+            #div1{
+                animation: fadein 2s;
+                border: 20;
+                border-style:groove;
+                border-width: 5px;
+                border-color: black;
+                float: left;
+                position: fixed;
+                margin-top: 8%;
+                margin-left: 3%;
+                margin-right: 2%;
+                width: 21%;
+                height: 70%;
+            
+                background-color: #5f9ea0;
+            }
+            #div2{
+                animation: fadein2 3s;
+                float: right;
+                border: 20;
+                border-style:groove;
+                border-width: 5px;
+                border-color: black;
+                margin-top: 6%;
+                margin-right: 8%;
+                margin-bottom: 3%;
+                width: 63%;
+                background-color: #696969;
+            }
+            #div3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-style: dotted;
+                border-width: 4px;
+                border-color: orange;
+                background-color: wheat;
+                margin-left: 5%;
+                width: 90%;
+                height: 5%;
+            }
+            #div4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-style: dotted;
+                border-width: 4px;
+                border-color: orange;
+                background-color: skyblue;
+                margin-left: 5%;
+                width: 90%;
+                height: 5%;
+            }
+            #div5 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-style: dotted;
+                border-width: 4px;
+                border-color: orange;
+                background-color: greenyellow;
+                margin-left: 5%;
+                width: 90%;
+                height: 30%;
+                margin-bottom: 3%;
+            }
+            .p1{
+                white-space: normal;
+                word-wrap:break-word;
+                word-break: break-all;
+                margin-left: 6%;
+                margin-right: 6%;
+                margin-top: 3%;
+                font-size: 33px;
+                line-height: 1;
+                color: #eee8aa;
+            }
+            @keyframes type {
+                from { width: 0 }
+            }
+            @keyframes type-border{
+                50% { border-color:transparent; }
+            }
+            @keyframes type-borderend{
+                0% { border-color: #031120; }
+                50% { border-color: #031120; }
+                100% { border-color: #031120; }
+            }
+            .an{
+                float: left;
+                word-wrap:break-word;
+                word-break: break-all;
+                width: 5.8em;
+                overflow: hidden;
+                white-space: nowrap;
+                color: white; 
+                border-right: .05em solid;
+                animation: type 0.3s steps(8),
+                    type-border 0.5s steps(1) 11,
+                    type-borderend 0.1s steps(5) 5s infinite;
+            
+            }
+            .ball {
+                font-family: 微軟正黑體 !important;
+                height: 130px;
+                width: 130px;
+                border-radius: 999em;
+                background-color: blue;
+                font-size: 60px;
+                font-weight: bold;
+                color: white;
+                transition: transform 1s ease;
+            }
+            .ptr{
+                height: 50px;
+                width: 65px;
+                transition: transform 1s ease;
+            }
+            #ptrimg{
+                transform: translateX(-200%);
+            }
+            #ball0{
+                left: 0;
+            }
+            #ball1{
+                left: 0%;
+            }
+            #ball2{
+                left: 20%;
+            }
+            #ball3{
+                left: 40%;
+            }
+            #ball4{
+                left: 60%;
+            }
+            #ball5{
+                left: 80%;
+            }
+            #button1{
+                float: left;
+            }
+            .blink-1 {
+                font-size: 30px;
+                font-weight: bold;
+	            -webkit-animation: blink-1 0.6s alternate ;
+	            animation: blink-1 0.6s alternate ;
+                margin-top: 1%;
+                width:90%;
+                height:20%;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            @-webkit-keyframes blink-1 {
+                0%,
+                50%,
+                100% {
+                opacity: 1;
+                  }
+                25%,
+                75% {
+                    opacity: 0;
+                }
+            }
+            @keyframes blink-1 {
+              0%,
+              50%,
+              100% {
+                opacity: 1;
+              }
+              25%,
+              75% {
+                opacity: 0;
+              }
+            }
+            .delay-1 {
+              transition-delay: 1s;
+            }
+
+            .delay-2 {
+              transition-delay: 2s;
+            }
+
+            .delay-3 {
+              transition-delay: 3s;
+            }
+
+        </style>
+    </head>
+    <body id="bodyid">
+        <div style="background-color: #031120; width: 100%; top: 0%; left: 0; right: 0; position: fixed;">
+            <p class="an" style="color: white; margin: 0; font-size: 32px; float: left;">&nbsp;&nbsp;§泡沫排序</p>
+            <button onclick="sw()" id="button3"  class="btn btn-outline-success" style="float: right; margin-top: 5px; margin-right: 5px;" value="0">點擊切換背景</button>
+        </div>
+        <div id="div1" class="delay-1">
+            <button class="blink-1">首頁</button>
+            <button class="blink-1" style="margin-top: 25%; background-color: aqua;">泡沫排序</button>
+            <button class="blink-1">選擇排序</button>
+            <button class="blink-1">插入排序</button>
+        </div>
+        <div id="div2" class="delay-2">
+            <!--p id="p1">&nbsp;&nbsp;&nbsp;&nbsp;Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed magna neque. Nunc eget mi tincidunt felis pharetra tincidunt. Quisque et consectetur neque. Nullam eu consectetur ipsum. Vivamus vel diam at odio ultrices tristique. Etiam tempus egestas ex, quis euismod eros mollis in. Vivamus placerat sodales felis, vitae viverra mauris. Nam vulputate commodo augue, in bibendum nulla elementum id. Nulla facilisi. Nulla eu erat condimentum, blandit elit sed, mollis sapien. Phasellus viverra cursus vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In pellentesque arcu vel purus tempus gravida. Sed finibus laoreet est vulputate fermentum. Nunc hendrerit aliquet sapien.</p-->
+            <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;泡沫排序（Bubble Sort）: 是一種簡單的排序演算法。它重複地走訪過要排序的數列，一次比較兩個元素，如果它們的順序錯誤就把它們交換過來。走訪數列的工作是重複地進行直到沒有再需要交換，也就是說該數列已經排序完成。這個演算法的名字由來是因為越小的元素會經由交換慢慢「浮」到數列的頂端。泡沫排序對n個項目需要O(n^2)的比較次數，且可以原地排序。儘管這個演算法是最簡單瞭解和實作的排序演算法之一，但它對於包含大量的元素的數列排序是很沒有效率的。</p>
+            <p class="p1">泡沫排序演算法的運作如下：<br><br>
+                1.比較相鄰的元素。如果第一個比第二個大，就交換它們兩個。<br><br>
+                2.對每一對相鄰元素作同樣的工作，從開始第一對到結尾的最後一對。這步做完後，最後的元素會是最大的數。<br><br>
+                3.針對所有的元素重複以上的步驟，除了最後一個。<br><br>
+                4.持續每次對越來越少的元素重複上面的步驟，直到沒有任何一對數字需要比較</p>
+            <button onclick="bubble_sort()" value=-1 id="button1"  class="btn btn-outline-warning" style="margin: 2%;">點擊我以開始排序</button>
+            <button onclick="reset()" id="button2"  class="btn btn-outline-danger" style="margin: 2%;">點擊我以重置數列</button>
+            <div id="div4">
+                <img src="./ptr.png" id="ptrimg" class="ptr" style="transform: translateX(-400%);">
+            </div>
+            <div id="div3">
+                <div class="ball" id="ball1"  style="transform: translateX(0%);" value="1">
+                   <center>3</center>
+                </div>
+                <div class="ball" id="ball2"  style="transform: translateX(0%);" value="2">
+                    <center>8</center>
+                </div>
+                <div class="ball" id="ball3"  style="transform: translateX(0%);" value="3">
+                    <center>7</center>
+                </div>
+                <div class="ball" id="ball4"  style="transform: translateX(0%);" value="4">
+                    <center>4</center>
+                </div>
+                <div class="ball" id="ball5"  style="transform: translateX(0%);" value="5">
+                   <center>1</center>
+                </div>
+            </div>
+            <div id="div5">
+                <p id="jstest" ></p>
+            </div>
+
+        </div>
+    </body>
+
+
+    <!--script src="./wowjs/js/wow.min.js"></script-->
+    <script>
+    sw = function(){
+        var thebody = document.getElementById('bodyid');
+        if(button3.value == 0){
+            thebody.style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1109430839445553163/1188767698289700874/IMG_2633.gif?ex=659bb931&is=65894431&hm=8b22164e3732696bca0c90b9cd000b90880d976b013ed2eb0955bac76651ecef&)";
+            button3.value = 1;
+        }else{
+            thebody.style.backgroundImage = "none";
+            button3.value = 0;
+        }
+    }
+    //new WOW().init();
+    var j
+    var arr = [3,8,7,4,1];
+    document.getElementById("jstest").innerHTML = arr;
+    bubble_sort = function(j=0) {
+        j = parseInt(button1.value);
+        theptr = document.getElementById("ptrimg");
+        console.log(theptr);
+        theptrT = theptr.style.transform;
+        console.log(theptrT);
+        j = j + 1;
+        console.log(j);
+        if(j > 3){
+            j = -1;
+            theptr.style.transform ="translateX(-400%)";
+            button1.value = j;
+            console.log("j>4");
+            return;
+        }else{
+            theptr.style.transform ="translateX(" + (parseInt(theptrT.substring(11,theptrT.length-2)) + (200)) + "%)";
+            button1.value = j;
+            console.log("j<4");
+            console.log(theptr.style.transform);
+        }
+        ball1 = document.getElementById("ball1");
+        ball2 = document.getElementById("ball2");
+        ball3 = document.getElementById("ball3");
+        ball4 = document.getElementById("ball4");
+        ball5 = document.getElementById("ball5");
+        console.log(arr);
+        console.log(j);
+		if (arr[j] > arr[j + 1]) {
+            ballno1 = document.getElementById("ball" + (j+1).toString());
+            ballno2 = document.getElementById("ball" + (j+2).toString());
+            console.log(ballno1.id);
+            console.log(ballno2.id);
+		    temp = arr[j];
+		    arr[j] = arr[j + 1];
+		    arr[j + 1] = temp;
+            console.log(temp);
+            console.log(arr);
+            tempBallno1T = ballno1.style.transform;
+            tempBallno2T = ballno2.style.transform;
+            ballno1.style.transform ="translateX(" + (parseInt(tempBallno1T.substring(11,tempBallno1T.length-2)) + (100)) + "%)"; 
+            ballno2.style.transform ="translateX(" + (parseInt(tempBallno2T.substring(11,tempBallno2T.length-2)) + -(100)) + "%)"; 
+            [ballno1.id,ballno2.id] = [ballno2.id,ballno1.id];
+		}
+        document.getElementById("jstest").innerHTML = arr
+        var i = 0;
+    reset = function(){
+        ball1 = document.getElementById("ball1");
+        ball2 = document.getElementById("ball2");
+        ball3 = document.getElementById("ball3");
+        ball4 = document.getElementById("ball4");
+        ball5 = document.getElementById("ball5");
+        ball1.style.transform ="translateX(0%)";
+        ball2.style.transform ="translateX(0%)";
+        ball3.style.transform ="translateX(0%)";
+        ball4.style.transform ="translateX(0%)";
+        ball5.style.transform ="translateX(0%)";
+        ball1.id = "ball" + ball1.getAttribute("value");
+        ball2.id = "ball" + ball2.getAttribute("value");
+        ball3.id = "ball" + ball3.getAttribute("value");
+        ball4.id = "ball" + ball4.getAttribute("value");
+        ball5.id = "ball" + ball5.getAttribute("value");
+        ptrimg.style.transform ="translateX(-400%)";
+        arr = [3,8,7,4,1];
+        j = -1;
+        button1.value = j;
+        document.getElementById("jstest").innerHTML = arr;
+    }
+
+    };
+    </script>
+</html>
