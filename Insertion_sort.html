@@ -8,7 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
-        <title>插入排序</title>
+        <title>插入排序 </title>
         <script src="https://unpkg.com/scrollreveal"></script>
         <style>
             @keyframes fadein {
@@ -258,13 +258,16 @@
         </div>
         <div id="div2" class="delay-2">
             <!--p id="p1">&nbsp;&nbsp;&nbsp;&nbsp;Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed magna neque. Nunc eget mi tincidunt felis pharetra tincidunt. Quisque et consectetur neque. Nullam eu consectetur ipsum. Vivamus vel diam at odio ultrices tristique. Etiam tempus egestas ex, quis euismod eros mollis in. Vivamus placerat sodales felis, vitae viverra mauris. Nam vulputate commodo augue, in bibendum nulla elementum id. Nulla facilisi. Nulla eu erat condimentum, blandit elit sed, mollis sapien. Phasellus viverra cursus vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In pellentesque arcu vel purus tempus gravida. Sed finibus laoreet est vulputate fermentum. Nunc hendrerit aliquet sapien.</p-->
-            <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;泡沫排序（Bubble Sort）: 是一種簡單的排序演算法。它重複地走訪過要排序的數列，一次比較兩個元素，如果它們的順序錯誤就把它們交換過來。走訪數列的工作是重複地進行直到沒有再需要交換，也就是說該數列已經排序完成。這個演算法的名字由來是因為越小的元素會經由交換慢慢「浮」到數列的頂端。泡沫排序對n個項目需要O(n^2)的比較次數，且可以原地排序。儘管這個演算法是最簡單瞭解和實作的排序演算法之一，但它對於包含大量的元素的數列排序是很沒有效率的。</p>
-            <p class="p1">泡沫排序演算法的運作如下：<br><br>
-                1.比較相鄰的元素。如果第一個比第二個大，就交換它們兩個。<br><br>
-                2.對每一對相鄰元素作同樣的工作，從開始第一對到結尾的最後一對。這步做完後，最後的元素會是最大的數。<br><br>
-                3.針對所有的元素重複以上的步驟，除了最後一個。<br><br>
-                4.持續每次對越來越少的元素重複上面的步驟，直到沒有任何一對數字需要比較</p>
-            <button onclick="bubble_sort()" value=-1 id="button1"  class="btn btn-outline-warning" style="margin: 2%;">點擊我以開始排序</button>
+            <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;插入排序（Insertion Sort）是一種簡單直觀的排序演算法。它的工作原理是通過構建有序序列，對於未排序資料，在已排序序列中從後向前掃描，找到相應位置並插入。插入排序在實現上，通常採用in-place排序
+            ，因而在從後向前掃描過程中，需要反覆把已排序元素逐步向後挪位，為最新元素提供插入空間</p>
+            <p class="p1">插入排序演算法的運作如下：<br><br>
+                1.從第一個元素開始，該元素可以認為已經被排序。<br><br>
+                2.取出下一個元素，在已經排序的元素序列中從後向前掃描。<br><br>
+                3.如果該元素（已排序）大於新元素，將該元素移到下一位置。<br><br>
+                4.重複步驟3，直到找到已排序的元素小於或者等於新元素的位置。<br><br>
+                5.將新元素插入到該位置後。<br><br>
+                6.重複步驟2~5。</p>
+            <button onclick="insertionSort()" value=0 id="button1"  class="btn btn-outline-warning" style="margin: 2%;">點擊我以開始排序</button>
             <button onclick="reset()" id="button2"  class="btn btn-outline-danger" style="margin: 2%;">點擊我以重置數列</button>
             <div id="div4">
                 <img src="./ptr.png" id="ptrimg" class="ptr" style="transform: translateX(-400%);">
@@ -309,8 +312,7 @@
     //new WOW().init();
     var j
     var arr = [3,8,7,4,1];
-    document.getElementById("jstest").innerHTML = arr;
-    bubble_sort = function(j=0) {
+    function insertionSort() {
         j = parseInt(button1.value);
         theptr = document.getElementById("ptrimg");
         console.log(theptr);
@@ -318,8 +320,8 @@
         console.log(theptrT);
         j = j + 1;
         console.log(j);
-        if(j > 3){
-            j = -1;
+        if(j > 4){
+            j = 0;
             theptr.style.transform ="translateX(-400%)";
             button1.value = j;
             console.log("j>4");
@@ -330,31 +332,36 @@
             console.log("j<4");
             console.log(theptr.style.transform);
         }
-        ball1 = document.getElementById("ball1");
-        ball2 = document.getElementById("ball2");
-        ball3 = document.getElementById("ball3");
-        ball4 = document.getElementById("ball4");
-        ball5 = document.getElementById("ball5");
-        console.log(arr);
-        console.log(j);
-		if (arr[j] > arr[j + 1]) {
-            ballno1 = document.getElementById("ball" + (j+1).toString());
-            ballno2 = document.getElementById("ball" + (j+2).toString());
-            console.log(ballno1.id);
-            console.log(ballno2.id);
-		    temp = arr[j];
-		    arr[j] = arr[j + 1];
-		    arr[j + 1] = temp;
-            console.log(temp);
+
+        //for (let i = 1; i < arr.length; i++) {
+            let i = j;
+            let key = arr[i];
+            let jj= i - 1;
+            console.log(i);
+            console.log(jj);
+            console.log(key);
+            console.log(arr[jj]);
             console.log(arr);
-            tempBallno1T = ballno1.style.transform;
-            tempBallno2T = ballno2.style.transform;
-            ballno1.style.transform ="translateX(" + (parseInt(tempBallno1T.substring(11,tempBallno1T.length-2)) + (100)) + "%)"; 
-            ballno2.style.transform ="translateX(" + (parseInt(tempBallno2T.substring(11,tempBallno2T.length-2)) + -(100)) + "%)"; 
-            [ballno1.id,ballno2.id] = [ballno2.id,ballno1.id];
-		}
-        document.getElementById("jstest").innerHTML = arr
-        var i = 0;
+            while (jj >= 0 && arr[jj] > key) {
+                console.log(arr[jj]);
+                console.log(jj);
+                console.log(key);
+                arr[jj + 1] = arr[jj];
+                ballno1 = document.getElementById("ball" + (jj+1).toString());
+                ballno2 = document.getElementById("ball" + (jj+2).toString());
+                console.log(ballno1.id);
+                console.log(ballno2.id);
+                tempBallno1T = ballno1.style.transform;
+                tempBallno2T = ballno2.style.transform;
+                ballno1.style.transform ="translateX(" + (parseInt(tempBallno1T.substring(11,tempBallno1T.length-2)) + (100)) + "%)"; 
+                ballno2.style.transform ="translateX(" + (parseInt(tempBallno2T.substring(11,tempBallno2T.length-2)) + -(100)) + "%)"; 
+                [ballno1.id,ballno2.id] = [ballno2.id,ballno1.id];
+                jj--;
+            }
+            arr[jj + 1] = key;
+            document.getElementById("jstest").innerHTML = arr;
+        }
+
     reset = function(){
         ball1 = document.getElementById("ball1");
         ball2 = document.getElementById("ball2");
@@ -373,11 +380,10 @@
         ball5.id = "ball" + ball5.getAttribute("value");
         ptrimg.style.transform ="translateX(-400%)";
         arr = [3,8,7,4,1];
-        j = -1;
+        j = 0;
         button1.value = j;
         document.getElementById("jstest").innerHTML = arr;
     }
 
-    };
     </script>
 </html>

@@ -8,7 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
-        <title>選擇排序</title>
+        <title>首頁</title>
         <script src="https://unpkg.com/scrollreveal"></script>
         <style>
             @keyframes fadein {
@@ -148,12 +148,12 @@
                 float: left;
                 word-wrap:break-word;
                 word-break: break-all;
-                width: 5.8em;
+                width: 3.6em;
                 overflow: hidden;
                 white-space: nowrap;
                 color: white; 
                 border-right: .05em solid;
-                animation: type 0.3s steps(8),
+                animation: type 0.3s steps(7),
                     type-border 0.5s steps(1) 11,
                     type-borderend 0.1s steps(5) 5s infinite;
             
@@ -247,27 +247,23 @@
     </head>
     <body id="bodyid">
         <div style="background-color: #031120; width: 100%; top: 0%; left: 0; right: 0; position: fixed;">
-            <p class="an" style="color: white; margin: 0; font-size: 32px; float: left;">&nbsp;&nbsp;§選擇排序</p>
+            <p class="an" style="color: white; margin: 0; font-size: 32px; float: left;">&nbsp;&nbsp;§首頁</p>
             <button onclick="sw()" id="button3"  class="btn btn-outline-success" style="float: right; margin-top: 5px; margin-right: 5px;" value="0">點擊切換背景</button>
         </div>
         <div id="div1" class="delay-1">
-            <a href="https://richardrail.github.io/112webpage/"><button class="blink-1">首頁</button></a>
+            <button class="blink-1" style=" background-color: aqua;">首頁</button>
             <a href="https://richardrail.github.io/112webpage/bouble_sort.html"><button class="blink-1" style="margin-top: 25%;">泡沫排序</button></a>
-            <button class="blink-1" style="background-color: aqua;">選擇排序</button>
+            <a href="https://richardrail.github.io/112webpage/selection_sort.html"><button class="blink-1">選擇排序</button></a>
             <a href="https://richardrail.github.io/112webpage/Insertion_sort.html"><button class="blink-1">插入排序</button></a>
         </div>
         <div id="div2" class="delay-2">
             <!--p id="p1">&nbsp;&nbsp;&nbsp;&nbsp;Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed magna neque. Nunc eget mi tincidunt felis pharetra tincidunt. Quisque et consectetur neque. Nullam eu consectetur ipsum. Vivamus vel diam at odio ultrices tristique. Etiam tempus egestas ex, quis euismod eros mollis in. Vivamus placerat sodales felis, vitae viverra mauris. Nam vulputate commodo augue, in bibendum nulla elementum id. Nulla facilisi. Nulla eu erat condimentum, blandit elit sed, mollis sapien. Phasellus viverra cursus vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In pellentesque arcu vel purus tempus gravida. Sed finibus laoreet est vulputate fermentum. Nunc hendrerit aliquet sapien.</p-->
-            <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;選擇排序（Selection sort）是一種簡單直觀的排序演算法。它的工作原理如下。首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然後，再從剩餘未排序元素中繼續尋找最小（大）元素，然後放到已排序序列的末尾。以此類推，直到所有元素均排序完畢。
-
-                選擇排序的主要優點與資料移動有關。如果某個元素位於正確的最終位置上，則它不會被移動。選擇排序每次交換一對元素，它們當中至少有一個將被移到其最終位置上，因此對
-                n個元素的表進行排序總共進行至多(n-1)次交換。在所有的完全依靠交換去移動元素的排序方法中，選擇排序屬於非常好的一種。</p>
-            <p class="p1">選擇排序演算法的運作如下：<br><br>
-                1.先假定當前這個數是最小數，然後和後面的每個數進行比較。<br><br>
-                2.如果發現有比當前數更小的數，就重新確定最小數，並得到索引值。<br><br>
-                3.當遍歷到陣列的最後時，就得到本輪的最小值和對應的索引。<br><br>
-                4.將目前的數與最小值交換。</p>
-            <button onclick="selectionSort()" value=-1 id="button1"  class="btn btn-outline-warning" style="margin: 2%;">點擊我以開始排序</button>
+            <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這裡好像可以寫網站簡介就是了， </p>
+            <p class="p1">這裡好像可以寫每個人的分工：<br><br>
+                1. 陳念正: 主要網頁發想、內容、排版、互動功能、動態效果製作<br><br>
+                2. 陳奕銓: 內容、動態效果製作(・∀・)<br><br>
+                3. 黃日炫: 簡報製作，資料查詢</p>
+            <!--button onclick="bubble_sort()" value=-1 id="button1"  class="btn btn-outline-warning" style="margin: 2%;">點擊我以開始排序</button>
             <button onclick="reset()" id="button2"  class="btn btn-outline-danger" style="margin: 2%;">點擊我以重置數列</button>
             <div id="div4">
                 <img src="./ptr.png" id="ptrimg" class="ptr" style="transform: translateX(-400%);">
@@ -291,7 +287,7 @@
             </div>
             <div id="div5">
                 <p id="jstest" ></p>
-            </div>
+            </div-->
 
         </div>
     </body>
@@ -312,7 +308,8 @@
     //new WOW().init();
     var j
     var arr = [3,8,7,4,1];
-    function selectionSort() {
+    document.getElementById("jstest").innerHTML = arr;
+    bubble_sort = function(j=0) {
         j = parseInt(button1.value);
         theptr = document.getElementById("ptrimg");
         console.log(theptr);
@@ -332,34 +329,31 @@
             console.log("j<4");
             console.log(theptr.style.transform);
         }
-
+        ball1 = document.getElementById("ball1");
+        ball2 = document.getElementById("ball2");
+        ball3 = document.getElementById("ball3");
+        ball4 = document.getElementById("ball4");
+        ball5 = document.getElementById("ball5");
         console.log(arr);
-        console.log(arr.length);
-            let i = j;
-            let minIndex = i;
-
-            for (let jj= i; jj < arr.length; jj++) {
-                if (arr[jj] < arr[minIndex]) {
-                    minIndex = jj;
-                }
-            }
-
-            if (minIndex !== i) {
-                ballno1 = document.getElementById("ball" + (i+1).toString());
-                ballno2 = document.getElementById("ball" + (minIndex+1).toString());
-                let temp = arr[i];
-                arr[i] = arr[minIndex];
-                arr[minIndex] = temp;
-                tempBallno1T = ballno1.style.transform;
-                tempBallno2T = ballno2.style.transform;
-                ballno1.style.transform ="translateX(" + (parseInt(tempBallno1T.substring(11,tempBallno1T.length-2)) + ((minIndex-i)*100)) + "%)"; 
-                ballno2.style.transform ="translateX(" + (parseInt(tempBallno2T.substring(11,tempBallno2T.length-2)) + -((minIndex-i)*100)) + "%)";
-                [ballno1.id,ballno2.id] = [ballno2.id,ballno1.id];
-
-            }
-            document.getElementById("jstest").innerHTML = arr;
-
-    }
+        console.log(j);
+		if (arr[j] > arr[j + 1]) {
+            ballno1 = document.getElementById("ball" + (j+1).toString());
+            ballno2 = document.getElementById("ball" + (j+2).toString());
+            console.log(ballno1.id);
+            console.log(ballno2.id);
+		    temp = arr[j];
+		    arr[j] = arr[j + 1];
+		    arr[j + 1] = temp;
+            console.log(temp);
+            console.log(arr);
+            tempBallno1T = ballno1.style.transform;
+            tempBallno2T = ballno2.style.transform;
+            ballno1.style.transform ="translateX(" + (parseInt(tempBallno1T.substring(11,tempBallno1T.length-2)) + (100)) + "%)"; 
+            ballno2.style.transform ="translateX(" + (parseInt(tempBallno2T.substring(11,tempBallno2T.length-2)) + -(100)) + "%)"; 
+            [ballno1.id,ballno2.id] = [ballno2.id,ballno1.id];
+		}
+        document.getElementById("jstest").innerHTML = arr
+        var i = 0;
     reset = function(){
         ball1 = document.getElementById("ball1");
         ball2 = document.getElementById("ball2");
@@ -383,6 +377,6 @@
         document.getElementById("jstest").innerHTML = arr;
     }
 
-    ;
+    };
     </script>
 </html>
