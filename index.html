@@ -258,11 +258,11 @@
         </div>
         <div id="div2" class="delay-2">
             <!--p id="p1">&nbsp;&nbsp;&nbsp;&nbsp;Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed magna neque. Nunc eget mi tincidunt felis pharetra tincidunt. Quisque et consectetur neque. Nullam eu consectetur ipsum. Vivamus vel diam at odio ultrices tristique. Etiam tempus egestas ex, quis euismod eros mollis in. Vivamus placerat sodales felis, vitae viverra mauris. Nam vulputate commodo augue, in bibendum nulla elementum id. Nulla facilisi. Nulla eu erat condimentum, blandit elit sed, mollis sapien. Phasellus viverra cursus vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In pellentesque arcu vel purus tempus gravida. Sed finibus laoreet est vulputate fermentum. Nunc hendrerit aliquet sapien.</p-->
-            <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這裡好像可以寫網站簡介就是了，然後接下來是占空間用的: /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ /金蘇魯3080/ </p>
+            <p class="p1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網站簡介:很久很久以前我們就在想我們到底要做什麼，後來發現我什麼都做不出來，這時候念正出現了，他每天都在為了apcs而努力，就缺一個最關鍵的東西，解題網站，但是我們做不出來，所以我們直接換個想法，這時候排序法出現了，他給了我們一條明路，這網站就誕生了。</p>
             <p class="p1">這裡好像可以寫每個人的分工：<br><br>
-                1. 陳念正<br><br>
-                2. 陳奕銓<br><br>
-                3. 黃日炫</p>
+                1. 陳念正: 主要網頁發想、內容、排版、互動功能、動態效果製作<br><br>
+                2. 陳奕銓: 內容、動態效果製作(・∀・)<br><br>
+                3. 黃日炫: 簡報製作，資料查詢</p>
             <!--button onclick="bubble_sort()" value=-1 id="button1"  class="btn btn-outline-warning" style="margin: 2%;">點擊我以開始排序</button>
             <button onclick="reset()" id="button2"  class="btn btn-outline-danger" style="margin: 2%;">點擊我以重置數列</button>
             <div id="div4">
@@ -351,8 +351,10 @@
             ballno1.style.transform ="translateX(" + (parseInt(tempBallno1T.substring(11,tempBallno1T.length-2)) + (100)) + "%)"; 
             ballno2.style.transform ="translateX(" + (parseInt(tempBallno2T.substring(11,tempBallno2T.length-2)) + -(100)) + "%)"; 
             [ballno1.id,ballno2.id] = [ballno2.id,ballno1.id];
-		}
-        document.getElementById("jstest").innerHTML = arr
+            document.getElementById("jstest").innerHTML = (arr[j+1]).toString + "大於" (arr[j]).toString + ",進行交換";
+		}else{
+            document.getElementById("jstest").innerHTML = "未進行交換";
+        }
         var i = 0;
     reset = function(){
         ball1 = document.getElementById("ball1");
